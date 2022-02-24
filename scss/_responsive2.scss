@@ -1,0 +1,185 @@
+@import "colores2";
+/*DESKTOP*/
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-family: "Roboto-Regular", sans-serif;
+}
+a {
+  color: $colorDos;
+  &:hover {
+    color: $colorUno;
+    background-color: $fondoUno;
+  }
+}
+.centrarTexto {
+  text-align: center;
+}
+.sinSubrayado {
+  text-decoration: none;
+}
+.links {
+  color: $colorTres;
+}
+.boton {
+  color: $colorDos;
+  background-color: $fondoTres;
+  transition: all 1s;
+  &:hover {
+    border: $colorUno solid 10px;
+  }
+}
+.imagenFondo {
+  background-image: $gradUno;
+  padding: 0px;
+}
+.tituloAnimado {
+  animation-name: tituloAnimado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes tituloAnimado {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+/*EXTEND*/
+.boton-nuevo {
+  @extend .boton;
+  background-color: $fondoCuatro;
+}
+/*Mixin*/
+@mixin pym($paddingg, $marginn) {
+  padding: $paddingg;
+  margin: $marginn;
+}
+.facebook {
+  @include pym(5px, 5px);
+}
+.instagram {
+  @include pym(5px, 5px);
+}
+.twitter {
+  @include pym(5px, 5px);
+}
+.youtube {
+  @include pym(5px, 5px);
+}
+/*ACLARACIÓN: se que este mixin no sirve de mucho ya que son todos los mismos valores 
+  pero es a modo de ejemplo porque realmente no necesito en mi proyecto uno por el momento*/
+.listaCont {
+  text-decoration: none;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  justify-items: center;
+  padding: 0px;
+}
+.gridsUno {
+  display: grid;
+  grid-template-areas:
+    "tituloH1 tituloH1"
+    "listaDeContinentes listaDeContinentes"
+    "articulosDeInteres articulosDeInteres"
+    "articulosUno articulosDos"
+    "tituloRegistro tituloRegistro"
+    "formulario formulario";
+  grid-template-columns: 50% 50%;
+}
+#tituloH1 {
+  display: grid;
+  grid-area: tituloH1;
+}
+#listaDeContinentes {
+  display: grid;
+  grid-area: listaDeContinentes;
+}
+#articulosDeInteres {
+  display: grid;
+  grid-area: articulosDeInteres;
+}
+#articulosUno {
+  display: grid;
+  grid-area: articulosUno;
+}
+#articulosDos {
+  display: grid;
+  grid-area: articulosDos;
+}
+#tituloRegistro {
+  display: grid;
+  grid-area: tituloRegistro;
+  text-align: center;
+}
+#formulario {
+  display: grid;
+  grid-area: formulario;
+  padding: 0px;
+}
+/*-------------------TABLET-----------------------*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  article {
+    padding: 15px 15px;
+  }
+  .imagenesTamaño {
+    width: 95%;
+  }
+}
+/*------------------SMARTPHONE--------------------*/
+@media (max-width: 480px) {
+  article {
+    padding: 15px 15px;
+  }
+  .gridsUno {
+    display: grid;
+    grid-template-areas:
+      "tituloH1"
+      "listaDeContinentes"
+      "articulosDeInteres"
+      "articulosUno"
+      "articulosDos"
+      "tituloRegistro"
+      "formulario";
+    grid-template-columns: 100%;
+  }
+  #tituloH1 {
+    display: grid;
+    grid-area: tituloH1;
+  }
+  #listaDeContinentes {
+    display: grid;
+    grid-area: listaDeContinentes;
+  }
+  #articulosDeInteres {
+    display: grid;
+    grid-area: articulosDeInteres;
+  }
+  #articulosUno {
+    display: grid;
+    grid-area: articulosUno;
+  }
+  #articulosDos {
+    display: grid;
+    grid-area: articulosDos;
+  }
+  #tituloRegistro {
+    display: grid;
+    grid-area: tituloRegistro;
+    text-align: center;
+  }
+  #formulario {
+    display: grid;
+    grid-area: formulario;
+  }
+  .imagenesTamaño {
+    width: 90%;
+  }
+}

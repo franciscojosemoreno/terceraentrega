@@ -1,0 +1,317 @@
+@import "colores";
+/*DESKTOP*/
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-family: "Roboto-Regular", sans-serif;
+}
+a {
+  color: $colorDos;
+  &:hover {
+    color: $colorUno;
+    background-color: $fondoUno;
+  }
+}
+.centrarTexto {
+  text-align: center;
+}
+.padParrafos {
+  display: grid;
+  padding: 20px;
+  align-content: center;
+}
+.padVideo {
+  display: grid;
+  padding: 20px;
+  align-items: stretch;
+}
+.padPubli {
+  padding: 20px;
+  text-align: center;
+}
+.padTitulos {
+  display: grid;
+  padding: 20px;
+  align-items: center;
+}
+.tamaño {
+  height: 70vh;
+}
+.imagenFondo {
+  background-image: $gradUno;
+}
+/*animaciones*/
+.boton {
+  color: $colorDos;
+  background-color: $fondoTres;
+  transition: all 1s;
+  &:hover {
+    border: $colorUno solid 10px;
+  }
+}
+.tituloAnimado {
+  animation-name: tituloAnimado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes tituloAnimado {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+/*EXTEND*/
+.boton-nuevo {
+  @extend .boton;
+  background-color: $fondoCuatro;
+}
+/*Mixin*/
+@mixin pym($paddingg, $marginn) {
+  padding: $paddingg;
+  margin: $marginn;
+}
+.facebook {
+  @include pym(5px, 5px);
+}
+.instagram {
+  @include pym(5px, 5px);
+}
+.twitter {
+  @include pym(5px, 5px);
+}
+.youtube {
+  @include pym(5px, 5px);
+}
+/*ACLARACIÓN: se que este mixin no sirve de mucho ya que son todos los mismos valores 
+pero es a modo de ejemplo porque realmente no necesito en mi proyecto uno por el momento*/
+.gridsUno {
+  display: grid;
+  grid-template-areas:
+    "seccionPrimera seccionPrimera seccionPrimera"
+    "tituloPd tituloPd publicidad"
+    "destinosUno destinosDos publicidad"
+    "beneficiosH2 video video"
+    "tituloRegistro tituloRegistro tituloRegistro"
+    "formulario formulario formulario";
+  grid-template-columns: 35% 35% 30%;
+}
+#seccionPrimera {
+  grid-area: seccionPrimera;
+}
+#tituloPd {
+  display: grid;
+  grid-area: tituloPd;
+}
+#destinosUno {
+  display: grid;
+  grid-area: destinosUno;
+}
+#destinosDos {
+  display: grid;
+  grid-area: destinosDos;
+}
+#publicidad {
+  display: grid;
+  grid-area: publicidad;
+}
+#beneficiosH2 {
+  display: grid;
+  grid-area: beneficiosH2;
+  padding-top: 50px;
+}
+#video {
+  display: grid;
+  grid-area: video;
+  padding-top: 50px;
+}
+#tituloRegistro {
+  display: grid;
+  grid-area: tituloRegistro;
+}
+#formulario {
+  display: grid;
+  grid-area: formulario;
+}
+iframe {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+/*-------------------TABLET-----------------------*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  section {
+    font-size: 20px;
+  }
+  img {
+    margin: auto;
+    display: block;
+  }
+  a {
+    color: $colorDos;
+    &:hover {
+      color: $colorUno;
+      background-color: $fondoUno;
+    }
+  }
+  .padParrafos {
+    display: grid;
+    align-content: center;
+  }
+  .padVideo {
+    display: grid;
+    align-items: stretch;
+  }
+  .padPubli {
+    text-align: center;
+  }
+  .padTitulos {
+    display: grid;
+    align-items: center;
+    text-align: center;
+  }
+  .gridsUno {
+    display: grid;
+    grid-template-areas:
+      "seccionPrimera seccionPrimera"
+      "tituloPd tituloPd"
+      "destinosUno destinosDos"
+      "publicidad publicidad"
+      "beneficiosH2 beneficiosH2"
+      "video video"
+      "tituloRegistro tituloRegistro"
+      "formulario formulario";
+    grid-template-columns: 50% 50%;
+  }
+  #seccionPrimera {
+    grid-area: seccionPrimera;
+  }
+  #tituloPd {
+    display: grid;
+    grid-area: tituloPd;
+  }
+  #destinosUno {
+    display: grid;
+    grid-area: destinosUno;
+  }
+  #destinosDos {
+    display: grid;
+    grid-area: destinosDos;
+  }
+  #publicidad {
+    display: grid;
+    grid-area: publicidad;
+  }
+  #beneficiosH2 {
+    display: grid;
+    grid-area: beneficiosH2;
+    text-align: center;
+  }
+  #video {
+    display: grid;
+    grid-area: video;
+    align-items: stretch;
+  }
+  #tituloRegistro {
+    display: grid;
+    grid-area: tituloRegistro;
+  }
+  #formulario {
+    display: grid;
+    grid-area: formulario;
+  }
+}
+/*------------------SMARTPHONE--------------------*/
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+  }
+  a {
+    color: $colorDos;
+    &:hover {
+      color: $colorUno;
+      background-color: $fondoUno;
+    }
+  }
+  .padParrafos {
+    display: grid;
+    align-content: center;
+    padding: 0px 10px;
+  }
+  .padVideo {
+    display: grid;
+    align-items: stretch;
+  }
+  .padPubli {
+    display: grid;
+    text-align: center;
+    padding: 0px;
+  }
+  .padTitulos {
+    display: grid;
+    padding: 0px;
+    align-items: center;
+  }
+  .gridsUno {
+    display: grid;
+    grid-template-areas:
+      "seccionPrimera"
+      "tituloPd"
+      "destinosUno"
+      "destinosDos"
+      "publicidad"
+      "beneficiosH2"
+      "video"
+      "tituloRegistro"
+      "formulario";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  #seccionPrimera {
+    grid-area: seccionPrimera;
+  }
+  #tituloPd {
+    display: grid;
+    grid-area: tituloPd;
+    text-align: center;
+  }
+  #destinosUno {
+    display: grid;
+    grid-area: destinosUno;
+  }
+  #destinosDos {
+    display: grid;
+    grid-area: destinosDos;
+  }
+  #publicidad {
+    display: grid;
+    grid-area: publicidad;
+  }
+  #beneficiosH2 {
+    display: grid;
+    grid-area: beneficiosH2;
+    text-align: center;
+    padding-top: 0px;
+  }
+  #video {
+    display: grid;
+    grid-area: video;
+    height: 100vh;
+    padding-top: 0px;
+  }
+  #tituloRegistro {
+    display: grid;
+    grid-area: tituloRegistro;
+  }
+  #formulario {
+    display: grid;
+    grid-area: formulario;
+  }
+}

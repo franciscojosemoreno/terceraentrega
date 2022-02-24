@@ -1,0 +1,35 @@
+@import "colores2";
+h1 {
+  color: $colorUno;
+  padding: 35px 35px;
+}
+h2 {
+  color: $colorUno;
+}
+h3 {
+  color: $colorUno;
+}
+section {
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+article {
+  padding: 25px 25px;
+}
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: $fondoDos;
+  padding: 10px;
+}
+#padForm {
+  padding-top: 30px;
+}
+ul {
+  li {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+@import "colores3";
+h1 {
+  color: $colorUno;
+  font-size: 30px;
+  padding: 50px 0px 50px 0px;
+}
+h2 {
+  color: $colorUno;
+}
+h3 {
+  color: $colorUno;
+}
+section {
+  font-size: 20px;
+}
+ul {
+  li {
+    padding: 10px;
+  }
+}
+a {
+  color: $colorDos;
+}
+a:hover {
+  color: $colorUno;
+  background-color: $fondoUno;
+}
+footer {
+  background-color: $fondoDos;
+  padding: 10px;
+}

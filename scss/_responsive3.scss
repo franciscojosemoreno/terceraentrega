@@ -1,0 +1,394 @@
+@import "colores3";
+/*DESKTOP*/
+* {
+  margin: 0%;
+}
+body {
+  font-family: "Roboto-Regular", sans-serif;
+}
+.centrarTexto {
+  text-align: center;
+}
+.sinSubrayado {
+  text-decoration: none;
+}
+.paddinGen {
+  padding: 20px;
+  text-align: center;
+}
+.paddingGenDos {
+  padding: 10px;
+}
+.padForm {
+  padding-top: 30px;
+}
+.centradoTexto {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  padding: 0px 20px;
+}
+.centradoImagen {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.centerText {
+  text-align: center;
+}
+.imagenFondo {
+  background-image: $gradUno;
+}
+.boton {
+  color: $colorDos;
+  background-color: $fondoTres;
+  transition: all 1s;
+  margin-bottom: 5px;
+  &:hover {
+    border: $colorUno solid 10px;
+  }
+}
+.tituloAnimado {
+  padding-left: 20px;
+  animation-name: tituloAnimado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes tituloAnimado {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+/*EXTEND*/
+.boton-nuevo {
+  @extend .boton;
+  background-color: $fondoCuatro;
+}
+/*Mixin*/
+@mixin pym($paddingg, $marginn) {
+  padding: $paddingg;
+  margin: $marginn;
+}
+.facebook {
+  @include pym(5px, 5px);
+}
+.instagram {
+  @include pym(5px, 5px);
+}
+.twitter {
+  @include pym(5px, 5px);
+}
+.youtube {
+  @include pym(5px, 5px);
+}
+/*ACLARACIÓN: se que este mixin no sirve de mucho ya que son todos los mismos valores 
+    pero es a modo de ejemplo porque realmente no necesito en mi proyecto uno por el momento*/
+.gridsUno {
+  display: grid;
+  grid-template-areas:
+    "tituloUno tituloUno"
+    "textoUno imagenUno"
+    "imagenDos textoDos";
+  grid-template-columns: 50% 50%;
+}
+.gridsDos {
+  display: grid;
+  grid-template-areas:
+    "tituloDos tituloDos tituloDos"
+    "imagenAbajo1 imagenAbajo2 imagenAbajo3"
+    "textoAbajo1 textoAbajo2 textoAbajo3"
+    "tituloReg tituloReg tituloReg"
+    "formulario formulario formulario";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#tituloUno {
+  grid-area: tituloUno;
+  display: grid;
+}
+#textoUno {
+  grid-area: textoUno;
+  display: grid;
+  margin: 0rem 2rem;
+}
+#imagenUno {
+  grid-area: imagenUno;
+  display: grid;
+  justify-content: center;
+}
+#imagenDos {
+  grid-area: imagenDos;
+  display: grid;
+}
+#textoDos {
+  grid-area: textoDos;
+  display: grid;
+  margin: 0rem 2rem;
+}
+#tituloDos {
+  grid-area: tituloDos;
+  display: grid;
+  padding: 50px 0px;
+}
+#imagenAbajo1 {
+  grid-area: imagenAbajo1;
+  display: grid;
+  justify-content: center;
+}
+#imagenAbajo2 {
+  grid-area: imagenAbajo2;
+  display: grid;
+  justify-content: center;
+}
+#imagenAbajo3 {
+  grid-area: imagenAbajo3;
+  display: grid;
+  justify-content: center;
+}
+#textoAbajo1 {
+  grid-area: textoAbajo1;
+  display: grid;
+}
+#textoAbajo2 {
+  grid-area: textoAbajo2;
+  display: grid;
+}
+#textoAbajo3 {
+  grid-area: textoAbajo3;
+  display: grid;
+}
+#tituloReg {
+  grid-area: tituloReg;
+  display: grid;
+  text-align: center;
+  padding: 50px 0px;
+}
+#formulario {
+  grid-area: formulario;
+  display: grid;
+}
+/*----------------TABLET-----------------*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  .gridsUno {
+    display: grid;
+    grid-template-areas:
+      "tituloUno tituloUno"
+      "textoUno imagenUno"
+      "imagenDos textoDos";
+    grid-template-columns: 50% 50%;
+  }
+  .gridsDos {
+    display: grid;
+    grid-template-areas:
+      "tituloDos tituloDos"
+      "imagenAbajo1 imagenAbajo1"
+      "textoAbajo1 textoAbajo1"
+      "imagenAbajo2 imagenAbajo2"
+      "textoAbajo2 textoAbajo2"
+      "imagenAbajo3 imagenAbajo3"
+      "textoAbajo3 textoAbajo3"
+      "tituloReg tituloReg"
+      "formulario formulario";
+    grid-template-columns: 1fr 1fr;
+  }
+  #tituloUno {
+    grid-area: tituloUno;
+    display: grid;
+  }
+  #textoUno {
+    grid-area: textoUno;
+    display: grid;
+  }
+  #imagenUno {
+    grid-area: imagenUno;
+    display: grid;
+  }
+  #imagenDos {
+    grid-area: imagenDos;
+    display: grid;
+  }
+  #textoDos {
+    grid-area: textoDos;
+    display: grid;
+  }
+  #tituloDos {
+    grid-area: tituloDos;
+    display: grid;
+    padding: 50px 0px;
+  }
+  #imagenAbajo1 {
+    grid-area: imagenAbajo1;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #imagenAbajo2 {
+    grid-area: imagenAbajo2;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #imagenAbajo3 {
+    grid-area: imagenAbajo3;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #textoAbajo1 {
+    grid-area: textoAbajo1;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #textoAbajo2 {
+    grid-area: textoAbajo2;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #textoAbajo3 {
+    grid-area: textoAbajo3;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  #tituloReg {
+    grid-area: tituloReg;
+    display: grid;
+    text-align: center;
+    padding: 50px 0px;
+  }
+  #formulario {
+    grid-area: formulario;
+    display: grid;
+    width: 100%;
+  }
+  .centradoTexto {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 0px 20px;
+  }
+  .centradoImagen {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  .tamañoTable {
+    width: 100%;
+  }
+  .paddinGen {
+    padding: 20px;
+    text-align: center;
+  }
+  .paddingGenDos {
+    padding: 10px;
+  }
+}
+/*------------------SMARTPHONE--------------------*/
+@media (max-width: 480px) {
+  .gridsUno {
+    display: grid;
+    grid-template-areas:
+      "tituloUno"
+      "textoUno"
+      "imagenUno"
+      "textoDos"
+      "imagenDos";
+    grid-template-columns: 100%;
+  }
+  .gridsDos {
+    display: grid;
+    grid-template-areas:
+      "tituloDos"
+      "imagenAbajo1"
+      "textoAbajo1"
+      "imagenAbajo2"
+      "textoAbajo2"
+      "imagenAbajo3"
+      "textoAbajo3"
+      "tituloReg"
+      "formulario";
+    grid-template-columns: 1fr;
+  }
+  #tituloUno {
+    grid-area: tituloUno;
+    display: grid;
+  }
+  #textoUno {
+    grid-area: textoUno;
+    display: grid;
+    margin: 0rem 2rem;
+  }
+  #imagenUno {
+    grid-area: imagenUno;
+    display: grid;
+    justify-content: center;
+  }
+  #imagenDos {
+    grid-area: imagenDos;
+    display: grid;
+  }
+  #textoDos {
+    grid-area: textoDos;
+    display: grid;
+    margin: 0rem 2rem;
+  }
+  #tituloDos {
+    grid-area: tituloDos;
+    display: grid;
+    padding: 50px 0px;
+  }
+  #imagenAbajo1 {
+    grid-area: imagenAbajo1;
+    display: grid;
+    justify-content: center;
+  }
+  #imagenAbajo2 {
+    grid-area: imagenAbajo2;
+    display: grid;
+    justify-content: center;
+  }
+  #imagenAbajo3 {
+    grid-area: imagenAbajo3;
+    display: grid;
+    justify-content: center;
+  }
+  #textoAbajo1 {
+    grid-area: textoAbajo1;
+    display: grid;
+  }
+  #textoAbajo2 {
+    grid-area: textoAbajo2;
+    display: grid;
+  }
+  #textoAbajo3 {
+    grid-area: textoAbajo3;
+    display: grid;
+  }
+  #tituloReg {
+    grid-area: tituloReg;
+    display: grid;
+    text-align: center;
+    padding: 50px 0px;
+  }
+  #formulario {
+    grid-area: formulario;
+    display: grid;
+  }
+  .tamañoTable {
+    width: 100%;
+  }
+}

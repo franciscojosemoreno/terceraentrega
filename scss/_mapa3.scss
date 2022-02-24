@@ -1,0 +1,12 @@
+/*Mapa*/
+$mapa: (
+  facebook: blue,
+  instagram: #a73272,
+  twitter: #0c78c0,
+  youtube: red,
+);
+@each $variables, $colores in $mapa {
+  .redes-#{$variables} {
+    color: $colores;
+  }
+}

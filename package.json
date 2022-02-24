@@ -1,0 +1,20 @@
+{
+  "name": "raiz-tercera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass scss/origen.scss css/destino.css",
+    "build-css": "sass scss/origen2.scss css/destino2.css",
+    "build-css": "sass scss/origen3.scss css/destino3.css",
+    "build-css": "sass scss/origen4.scss css/destino4.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.7"
+  }
+}

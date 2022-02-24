@@ -1,0 +1,37 @@
+/*Estructura*/
+@import "colores";
+/*Titulos*/
+h1 {
+  color: $colorUno;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+}
+h2 {
+  color: $colorUno;
+}
+h3 {
+  color: $colorUno;
+}
+/*main*/
+section {
+  font-size: 20px;
+  padding: 20px;
+}
+img {
+  margin: auto;
+  display: block;
+}
+/*FOOTER*/
+footer {
+  background-color: $fondoDos;
+  padding: 10px;
+}
+#padForm {
+  padding-top: 30px;
+}
+ul {
+  li {
+    padding: 10px;
+  }
+}

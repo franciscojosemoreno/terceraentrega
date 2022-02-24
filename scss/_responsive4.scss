@@ -1,0 +1,79 @@
+@import "colores4";
+* {
+  margin: 0px;
+}
+body {
+  font-family: "Roboto-Regular", sans-serif;
+}
+.blanco {
+  color: $colorDos;
+}
+.centrarTexto {
+  text-align: center;
+}
+.sinSubrayado {
+  text-decoration: none;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.paddingGen {
+  padding: 30px;
+}
+.centroBoton {
+  display: grid;
+  justify-content: center;
+}
+.imagenFondo {
+  background-image: $gradUno;
+  min-width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.boton {
+  color: $colorDos;
+  background-color: $fondoTres;
+  transition: all 1s;
+  &:hover {
+    border: $colorUno solid 10px;
+  }
+}
+.tituloAnimado {
+  animation-name: tituloAnimado;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes tituloAnimado {
+  from {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+/*EXTEND*/
+.boton-nuevo {
+  @extend .boton;
+  background-color: $fondoTres;
+}
+/*Mixin*/
+@mixin pym($paddingg, $marginn) {
+  padding: $paddingg;
+  margin: $marginn;
+}
+.facebook {
+  @include pym(5px, 5px);
+}
+.instagram {
+  @include pym(5px, 5px);
+}
+.twitter {
+  @include pym(5px, 5px);
+}
+.youtube {
+  @include pym(5px, 5px);
+}
+/*ACLARACIÓN: se que este mixin no sirve de mucho ya que son todos los mismos valores 
+      pero es a modo de ejemplo porque realmente no necesito en mi proyecto uno por el momento*/
